@@ -1,0 +1,75 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "renderHelloWorld",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"string"}
+			]
+		},
+		{
+			"name": "addTasks",
+			"inputs": [
+				{"name":"name","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "TasksList",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"string[]"}
+			]
+		},
+		{
+			"name": "timestamp",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"timestamp","type":"uint32"}
+			]
+		},
+		{
+			"name": "k",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"k","type":"int8"}
+			]
+		},
+		{
+			"name": "list",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"list","type":"string[]"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"timestamp","type":"uint32"},
+		{"name":"k","type":"int8"},
+		{"name":"list","type":"string[]"},
+		{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint32"},{"name":"OK","type":"bool"}],"name":"number","type":"map(int8,tuple)"}
+	]
+}
