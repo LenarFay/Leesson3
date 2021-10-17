@@ -56,43 +56,81 @@ contract tasksSpis {
     
     
 
-    function addTasks (string name) public returns (uint TaskID) {
-        tasks myLes = tasks(name,12,false);
+    /*function addTasks (string name, uint32 time) public returns (uint TaskID)  {
+        //tasks myLes = tasks(name,time,false);
         
-        number[TaskID]=myLes;
+        k+=1;
+        number[k]=tasks(name,time,false);
+        list.push(name);
+        TaskID=k;
+        return TaskID;
+        tvm.accept();
+    }*/
+     
+
+    function addTasks (string name) public returns (uint TaskID) {
+        tvm.accept();
+        tasks myLes = tasks(name,12,false);
+        k+=1;
+        number[k]=myLes;
         list.push(name);
         
         
-        return k++;
+        return k;
 
         
+        
+    }
+   
+
+
+
+
+
+
+
+
+    function TasksList ()  public returns (string[] l) { 
         tvm.accept();
-    }
-
-    function changeFlagArraySize(uint newSize) public {
-    // if the new size is smaller, removed array elements will be cleared
-    list.length = newSize;
-    }
-
-
-
-
-
-
-
-
-    function TasksList ()  public returns (string[] Le) { 
-        
-        return list[0:1];
+        l=list;
+        return l;
          
 
         
+        
+    }
+
+
+
+    string j;
+
+    function call (uint n) public {
+        
         tvm.accept();
     }
 
-    function trF (tasks[]) public {
+
+    function callTask (uint n) public {
+      
+        tvm.accept();   
+     }
+
+    function callTas (uint n) public returns (string g) {
+       
+        
+        tvm.accept();
+
+     }
+
+
+
+
+
+
+
+    /*function trF (tasks[]) public {
             
-        }
+        }*/
 
     
 

@@ -24,6 +24,7 @@
 				{"name":"name","type":"string"}
 			],
 			"outputs": [
+				{"name":"TaskID","type":"uint256"}
 			]
 		},
 		{
@@ -31,7 +32,32 @@
 			"inputs": [
 			],
 			"outputs": [
-				{"name":"value0","type":"string[]"}
+				{"name":"l","type":"string[]"}
+			]
+		},
+		{
+			"name": "call",
+			"inputs": [
+				{"name":"n","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "callTask",
+			"inputs": [
+				{"name":"n","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "callTas",
+			"inputs": [
+				{"name":"n","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"g","type":"string"}
 			]
 		},
 		{
@@ -47,7 +73,7 @@
 			"inputs": [
 			],
 			"outputs": [
-				{"name":"k","type":"int8"}
+				{"name":"k","type":"uint256"}
 			]
 		},
 		{
@@ -68,8 +94,9 @@
 		{"name":"_timestamp","type":"uint64"},
 		{"name":"_constructorFlag","type":"bool"},
 		{"name":"timestamp","type":"uint32"},
-		{"name":"k","type":"int8"},
+		{"name":"k","type":"uint256"},
 		{"name":"list","type":"string[]"},
-		{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint32"},{"name":"OK","type":"bool"}],"name":"number","type":"map(int8,tuple)"}
+		{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint32"},{"name":"OK","type":"bool"}],"name":"number","type":"map(uint256,tuple)"},
+		{"name":"j","type":"string"}
 	]
 }
