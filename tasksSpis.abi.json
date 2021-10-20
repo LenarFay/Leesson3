@@ -4,84 +4,61 @@
 	"header": ["time", "expire"],
 	"functions": [
 		{
+			"name": "createTask",
+			"inputs": [
+				{"name":"name","type":"string"},
+				{"name":"time","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTasksVal",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getTasks",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint256"},{"name":"OK","type":"bool"}],"name":"value0","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "deleteTask",
+			"inputs": [
+				{"name":"taskId","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "PerTask",
+			"inputs": [
+				{"name":"taskId","type":"uint256"}
+			],
+			"outputs": [
+				{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint256"},{"name":"OK","type":"bool"}],"name":"value0","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "getTask",
+			"inputs": [
+				{"name":"taskId","type":"uint256"}
+			],
+			"outputs": [
+				{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint256"},{"name":"OK","type":"bool"}],"name":"value0","type":"tuple"}
+			]
+		},
+		{
 			"name": "constructor",
 			"inputs": [
 			],
 			"outputs": [
-			]
-		},
-		{
-			"name": "renderHelloWorld",
-			"inputs": [
-			],
-			"outputs": [
-				{"name":"value0","type":"string"}
-			]
-		},
-		{
-			"name": "addTasks",
-			"inputs": [
-				{"name":"name","type":"string"}
-			],
-			"outputs": [
-				{"name":"TaskID","type":"uint256"}
-			]
-		},
-		{
-			"name": "TasksList",
-			"inputs": [
-			],
-			"outputs": [
-				{"name":"l","type":"string[]"}
-			]
-		},
-		{
-			"name": "call",
-			"inputs": [
-				{"name":"n","type":"uint256"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "callTask",
-			"inputs": [
-				{"name":"n","type":"uint256"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "callTas",
-			"inputs": [
-				{"name":"n","type":"uint256"}
-			],
-			"outputs": [
-				{"name":"g","type":"string"}
-			]
-		},
-		{
-			"name": "timestamp",
-			"inputs": [
-			],
-			"outputs": [
-				{"name":"timestamp","type":"uint32"}
-			]
-		},
-		{
-			"name": "k",
-			"inputs": [
-			],
-			"outputs": [
-				{"name":"k","type":"uint256"}
-			]
-		},
-		{
-			"name": "list",
-			"inputs": [
-			],
-			"outputs": [
-				{"name":"list","type":"string[]"}
 			]
 		}
 	],
@@ -93,10 +70,9 @@
 		{"name":"_pubkey","type":"uint256"},
 		{"name":"_timestamp","type":"uint64"},
 		{"name":"_constructorFlag","type":"bool"},
-		{"name":"timestamp","type":"uint32"},
-		{"name":"k","type":"uint256"},
-		{"name":"list","type":"string[]"},
-		{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint32"},{"name":"OK","type":"bool"}],"name":"number","type":"map(uint256,tuple)"},
-		{"name":"j","type":"string"}
+		{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint256"},{"name":"OK","type":"bool"}],"name":"taskArr","type":"tuple[]"},
+		{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint256"},{"name":"OK","type":"bool"}],"name":"notOKTaskArr","type":"tuple[]"},
+		{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint256"},{"name":"OK","type":"bool"}],"name":"OKTaskArr","type":"tuple[]"},
+		{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint256"},{"name":"OK","type":"bool"}],"name":"taskNum","type":"map(uint256,tuple)"}
 	]
 }
